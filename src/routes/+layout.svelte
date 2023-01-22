@@ -4,6 +4,7 @@
   import { Drawer, Footer, Navbar } from '$lib/components';
 
   import '../app.css';
+  import '$iconify';
 
   import type { PageData } from './$types';
   export let data: PageData;

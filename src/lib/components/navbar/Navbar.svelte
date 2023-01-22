@@ -1,7 +1,7 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { Navbar, NavLi, NavUl, NavHamburger, Chevron, DarkMode } from 'flowbite-svelte';
-  import { Home as IconHome } from 'svelte-heros-v2';
+  import { Icon } from 'daks-svelte';
   import NavBrand from './NavBrand.svelte';
   import Dropdown from './NavDropdown.svelte';
 
@@ -64,10 +64,9 @@
           target={link.target}
           {active}>
           {#if home}
-            <IconHome
-              class="-mt-0.5"
-              size="24"
-              variation={activeUrl === link.href ? 'solid' : 'outline'} />
+            <Icon
+              icon={`line-md:home-simple${active ? '-twotone' : ''}`}
+              class="w-6 h-6 -mt-0.5" />
           {:else}
             {@html link.label}
           {/if}

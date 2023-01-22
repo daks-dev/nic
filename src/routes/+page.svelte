@@ -7,8 +7,7 @@
     TextPlaceholder,
     VideoPlaceholder
   } from 'flowbite-svelte';
-  import { PhoneArrowUpRight as IconPhone, Envelope as IconMail } from 'svelte-heros-v2';
-  import { YandexMetrikaHit } from 'daks-svelte';
+  import { YandexMetrikaHit, Icon } from 'daks-svelte';
 
   const title = 'НИЦ СЭ • Строительная экспертиза';
   const description = 'АО НИЦ «Строительная экспертиза», Москва';
@@ -37,12 +36,16 @@
             <Button
               href="tel://+74953239923"
               size="xl">
-              <IconPhone size="32" />
+              <Icon
+                icon="ic:round-phone-in-talk"
+                class="w-10 h-10" />
             </Button>
             <Button
               href="mailto:mail@stroyexp.info"
               size="xl">
-              <IconMail size="32" />
+              <Icon
+                icon="ic:round-mail-outline"
+                class="w-10 h-10" />
             </Button>
           </div>
         </div>

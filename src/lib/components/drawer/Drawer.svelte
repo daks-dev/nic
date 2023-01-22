@@ -1,8 +1,8 @@
 <script lang="ts">
   import { afterNavigate } from '$app/navigation';
   import { sineInOut } from 'svelte/easing';
-  import { XMark as IconClose } from 'svelte-heros-v2';
   import { Drawer, Sidebar, SidebarBrand, SidebarWrapper } from 'flowbite-svelte';
+  import { Icon } from 'daks-svelte';
   import SidebarGroup from './SidebarGroup.svelte';
   export let menu: any;
 
@@ -74,6 +74,8 @@
     class="absolute top-5 right-5 p-2
            hover:bg-gray-200 dark:hover:bg-gray-700
            rounded-full">
-    <IconClose />
+    <Icon
+      icon="ic:round-close"
+      class="w-6 h-6" />
   </button>
 </Drawer>
