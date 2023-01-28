@@ -1,13 +1,13 @@
 {
   "name": "nic",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "NIC",
   "repository": {
     "type": "git",
     "url": "https://github.com/daks-dev/nic"
   },
   "author": "DVA",
-  "homepage": "https://stroyexp.info/",
+  "homepage": "https://dev.stroyexp.info/",
   "private": true,
   "scripts": {
     "clean": "rimraf .svelte-kit && rimraf build",
