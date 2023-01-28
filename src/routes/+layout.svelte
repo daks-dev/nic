@@ -53,6 +53,6 @@
 
 <Drawer menu={navigation.draver} />
 
-<ScreenBlock class="bg-neutral-200 dark:bg-slate-800" />
+<ScreenBlock class="bg-neutral-100 dark:bg-gray-800" />
 
 <YandexMetrikaInit />

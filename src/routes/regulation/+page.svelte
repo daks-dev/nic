@@ -23,7 +23,7 @@
 
   <div
     class="container
-           bg-loading bg-center bg-no-repeat bg-1/4 sm:bg-1/5 lg:bg-1/10">
+           bg-center bg-no-repeat bg-waiting bg-1/4 sm:bg-1/5 lg:bg-1/10">
     <iframe
       bind:this={node}
       on:load={onload}
