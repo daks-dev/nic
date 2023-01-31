@@ -101,6 +101,10 @@ export const footer = [
   {
     href: '/contacts',
     label: 'Контакты'
+  },
+  {
+    href: '/admin',
+    label: 'ic:outline-settings' // &#128736;
   }
 ];
 

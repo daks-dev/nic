@@ -112,7 +112,7 @@
                   {rel}
                   {href}
                   target={item.target}>
-                  {item.label}
+                  {@html item.label}
                 </a>
               </li>
             {/if}

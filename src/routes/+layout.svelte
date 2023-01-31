@@ -9,8 +9,7 @@
   import type { PageData } from './$types';
   export let data: PageData;
 
-  import app from '$lib/configs/app';
-  import navigation from '$lib/configs/navigation';
+  import { app, navigation } from '$lib/configs';
 
   // window.matchMedia('(prefers-color-scheme: dark)').matches
   if (!import.meta.env.SSR) {

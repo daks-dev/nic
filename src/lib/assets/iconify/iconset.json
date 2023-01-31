@@ -1,6 +1,7 @@
 {
   "ic": [
     "outline-location-on",
+    "outline-settings",
     "round-close",
     "round-arrow-forward-ios",
     "round-arrow-right",
@@ -22,19 +23,10 @@
     "twotone-dark-mode",
     "twotone-light-mode"
   ],
-  "line-md": [
-    "github-loop",
-    "home-simple",
-    "home-simple-filled",
-    "home-simple-twotone",
-    "loading-twotone-loop"
-  ],
   "svg-spinners": [
     "180-ring-with-bg",
     "8-dots-rotate",
-    "clock",
-    "dot-revolve",
-    "wind-toy"
+    "clock"
   ],
   "mdi": [
     "cube",
