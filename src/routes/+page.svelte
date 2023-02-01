@@ -89,7 +89,7 @@
     </div>
   </header>
 
-  <div class="placeholders container lg:content">
+  <div class="placeholders content">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16 items-center">
       <ImagePlaceholder />
       <TextPlaceholder class="" />
