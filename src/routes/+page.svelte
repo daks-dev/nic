@@ -42,7 +42,7 @@
         <div class="xs:hidden flex justify-around">
           <Button
             href="tel://{telephone.replace(/[\s-()]/g, '')}"
-            class="drop-shadow-lg"
+            class="shadow-md shadow-slate-500/20"
             color="light"
             size="xl">
             <Icon
@@ -51,7 +51,7 @@
           </Button>
           <Button
             href="mailto:{email}"
-            class="drop-shadow-lg"
+            class="shadow-md shadow-slate-500/20"
             color="light"
             size="xl">
             <Icon

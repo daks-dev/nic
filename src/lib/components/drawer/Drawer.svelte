@@ -27,7 +27,7 @@
 
 <button
   on:click={open}
-  class="fixed z-20 top-1/2 h-[35vmin] pr-6 hover:pr-8 -translate-y-1/2 rounded-r-lg 
+  class="fixed z-20 top-1/2 h-[35vmin] pr-6 hover:pr-8 -translate-y-1/2 rounded-r-lg
         bg-neutral-400/70 hover:bg-gray-400
         dark:bg-gray-700/70 dark:hover:bg-gray-400/70
         transition-all duration-100">

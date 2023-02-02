@@ -1,11 +1,13 @@
 <script lang="ts">
+  import { goto } from '$app/navigation';
   import { page } from '$app/stores';
   import {
     SidebarDropdownItem,
-    SidebarDropdownWrapper,
+    //SidebarDropdownWrapper,
     SidebarGroup,
     SidebarItem
   } from 'flowbite-svelte';
+  import SidebarDropdownWrapper from './SidebarDropdownWrapper.svelte'
 
   export let links: undefined | NavLink[] = undefined;
   export let root = '';
@@ -34,9 +36,9 @@
       {@const step = activeUrl.indexOf(`${href}/`) === 0}
       {#if link.links}
         <SidebarDropdownWrapper
+          on:dblclick={() => active || goto(href)}
           class={active || step ? itemStepClass : itemClass}
           label={link.label}
-          {href}
           {active}
           isOpen={step}>
           {#each link.links as item}
