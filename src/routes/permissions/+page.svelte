@@ -1,7 +1,10 @@
 <script lang="ts">
-  import { YandexMetrikaHit } from 'daks-svelte';
-  import Grid from './Grid.svelte';
-  import data from '$lib/assets/images/content/permissions';
+  import { YandexMetrikaHit, LightboxKit } from 'daks-svelte';
+
+  import type { PageData } from './$types';
+  export let data: PageData;
+
+  const { images, thumbnails } = data;
 
   const title = 'НИЦ СЭ • Допуски';
   const description = 'Допуски предпрятия АО НИЦ «Строительная экспертиза»';
@@ -16,5 +19,11 @@
     <h1 class="title">Допуски</h1>
   </header>
 
-  <Grid {data} />
+  <LightboxKit
+    class="container lg:content gap-8"
+    classes={{ overlay: 'overflow-offset' }}
+    options={{ behaviour: 'loop' }}
+    {images}
+    {thumbnails}
+    shadow />
 </main>

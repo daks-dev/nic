@@ -27,13 +27,16 @@
 
 <button
   on:click={open}
-  class="fixed z-20 top-1/2 h-[35vmin] pr-6 hover:pr-8 -translate-y-1/2 rounded-r-lg
-        bg-neutral-400/70 hover:bg-gray-400
-        dark:bg-gray-700/70 dark:hover:bg-gray-400/70
-        transition-all duration-100">
+  class="
+    fixed z-20 top-1/2 h-[35vmin] pr-6 hover:pr-8 -translate-y-1/2 rounded-r-lg
+    bg-neutral-400/70 hover:bg-gray-400
+    dark:bg-gray-700/70 dark:hover:bg-gray-400/70
+    transition duration-100">
   <span
-    class="max-w absolute right-2.5 top-1/2 w-1 h-1/2 sm:h-1/3 lg:1/4 -translate-y-1/2 rounded-lg animate-pulse
-          bg-gray-100 dark:bg-gray-800" />
+    class="
+      absolute right-2.5 top-1/2 w-1 h-1/2 sm:h-1/3 lg:1/4 -translate-y-1/2
+      rounded-lg bg-gray-100 dark:bg-gray-800
+      animate-pulse" />
 </button>
 
 <Drawer
@@ -52,7 +55,11 @@
           imgClass="h-24 lg:h-24"
           {site} />
         <a
-          class="py-2 px-4 rounded-full hover:bg-gray-400/50 text-slate-300 hover:text-slate-800 tracking-wider text-xl"
+          class="
+            py-2 px-4
+            rounded-full hover:bg-gray-400/50
+            text-slate-300 hover:text-slate-800 tracking-wider text-xl
+            select-none"
           href="tel://+74953239923">
           +7 (495) 323-99-23
         </a>
@@ -71,9 +78,10 @@
   </Sidebar>
   <button
     on:click={close}
-    class="absolute top-5 right-5 p-2
-           hover:bg-gray-200 dark:hover:bg-gray-700
-           rounded-full">
+    class="
+      absolute top-5 right-5 p-2
+      hover:bg-gray-200 dark:hover:bg-gray-700
+      rounded-full">
     <Icon
       icon="ic:round-close"
       class="w-6 h-6" />

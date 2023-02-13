@@ -1,12 +1,13 @@
 <script lang="ts">
-  import { YandexMetrikaHit } from 'daks-svelte';
-  import Grid from './Grid.svelte';
-  import data from '$lib/assets/images/content/partners';
+  import { YandexMetrikaHit, GalleryKit } from 'daks-svelte';
+
+  import type { PageData } from './$types';
+  export let data: PageData;
+
+  const { images, labels } = data;
 
   const title = 'НИЦ СЭ • Партнёры';
   const description = 'Партнёры АО НИЦ «Строительная экспертиза»';
-
-  const promise = data();
 </script>
 
 <YandexMetrikaHit
@@ -18,18 +19,15 @@
     <h1 class="title">Наши партнеры</h1>
   </header>
 
-  {#await promise}
-    <div
-      class="w-[30rem] aspect-video mx-auto
-             bg-no-repeat bg-center bg-loading-data bg-1/3" />
-  {:then partners}
-    <Grid {partners} />
-  {:catch error}
-    <div
-      class="error
-             w-[30rem] aspect-video mx-auto">
-      {error.message}
-    </div>
-    {@debug error}
-  {/await}
+  <GalleryKit
+    class="content lg:grid-cols-2 gap-x-8 gap-y-12"
+    classes={{
+      figure: 'items-center',
+      caption: 'mt-3 text-center text-lg text-slate-700 dark:text-slate-400'
+    }}
+    {images}
+    {labels}
+    grid
+    scale
+    shadow />
 </main>

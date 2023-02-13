@@ -1,8 +1,9 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { Dropdown, DropdownItem, Chevron } from 'flowbite-svelte';
+  import  type { NavItem } from 'daks-svelte';
 
-  export let link!: NavLink;
+  export let link: NavItem;
 
   //const active = (href: string) => $page.url.pathname === href || $page.url.pathname.indexOf(`${href}/`) === 0;
   $: activeUrl = $page.url.pathname;

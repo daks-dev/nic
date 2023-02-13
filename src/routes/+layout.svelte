@@ -1,6 +1,5 @@
 <script lang="ts">
-  import LazyLoad from 'vanilla-lazyload';
-  import { RouteTransition, ScreenBlock, YandexMetrikaInit } from 'daks-svelte';
+  import { lazyload, YandexMetrikaInit, RouteTransition, ScreenBlock } from 'daks-svelte';
   import { Drawer, Footer, Navbar } from '$lib/components';
 
   import '../app.css';
@@ -17,11 +16,7 @@
       localStorage.setItem('color-theme', 'dark');
       document.documentElement.classList.add('dark');
     }
-    if (!document.lazyloadInstance)
-      document.lazyloadInstance = new LazyLoad({
-        // use_native: true,
-        threshold: 0
-      });
+    document.lazyload ??= lazyload();
   }
 </script>
 
@@ -41,9 +36,9 @@
 </svelte:head>
 
 <RouteTransition
+  class="grow"
   referesh={data.referesh}
-  mode={1}
-  class="grow">
+  mode={1}>
   <slot />
 </RouteTransition>
 

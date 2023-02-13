@@ -27,7 +27,7 @@
         <h1
           class="mb-8
                    font-extrabold leading-tight
-                   text-3xl 2xs:text-4xl sm:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl
+                   text-4xl sm:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl
                    text-slate-800 dark:text-slate-200 dark:text-shadow"
           style:--text-shadow-val="3px">
           <span class="block text-[125%]">АО&nbsp;НИЦ</span>

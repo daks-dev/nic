@@ -8,18 +8,19 @@
     SidebarItem
   } from 'flowbite-svelte';
   import SidebarDropdownWrapper from './SidebarDropdownWrapper.svelte'
+  import  type { NavItem } from 'daks-svelte';
 
-  export let links: undefined | NavLink[] = undefined;
+  export let links: undefined | NavItem[] = undefined;
   export let root = '';
 
-  const itemClass = '!text-sm dark:!text-gray-400';
+  const itemClass = '!text-sm dark:!text-gray-400 select-none';
   /*{
     'text-base': false,
     'text-sm': true,
     'dark:text-white': false,
     'dark:text-gray-400': true
   }*/
-  const itemStepClass = '!text-sm';
+  const itemStepClass = '!text-sm select-none';
   /*{
     'text-base': false,
     'text-sm': true

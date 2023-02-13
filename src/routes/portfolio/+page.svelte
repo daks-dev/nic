@@ -1,12 +1,10 @@
 <script lang="ts">
-  import { YandexMetrikaHit } from 'daks-svelte';
-  import Grid from './Grid.svelte';
-  import { sources, squares } from '$lib/assets/images/content/portfolio';
+  import { YandexMetrikaHit, LightboxKit } from 'daks-svelte';
 
-  const data = async () => ({
-    images: await sources(),
-    thumbnails: await squares()
-  });
+  import type { PageData } from './$types';
+  export let data: PageData;
+
+  const { images, thumbnails } = data;
 
   const title = 'НИЦ СЭ • Проекты';
   const description = 'Проекты предпрятия АО НИЦ «Строительная экспертиза»';
@@ -21,5 +19,13 @@
     <h1 class="title">Недавние проекты</h1>
   </header>
 
-  <Grid {data} />
+  <LightboxKit
+    class="container gap-8"
+    classes={{ overlay: 'overflow-offset' }}
+    options={{ behaviour: 'loop' }}
+    {images}
+    {thumbnails}
+    rounded
+    shadow
+    grayscale />
 </main>

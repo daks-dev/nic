@@ -42,7 +42,9 @@
     <h1 class="title">Контакты</h1>
   </header>
 
-  <Contacts class="py-4" {microdata} />
+  <Contacts
+    class="py-4"
+    {microdata} />
 
   <YandexMap {data} />
 </main>

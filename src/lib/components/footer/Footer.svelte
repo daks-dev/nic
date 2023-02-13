@@ -1,11 +1,11 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { Footer, FooterLinkGroup, Label } from 'flowbite-svelte';
-  import { Icon } from 'daks-svelte';
+  import { IconTest, type NavItem } from 'daks-svelte';
   import FooterCopyright from './FooterCopyright.svelte';
   import FooterLink from './FooterLink.svelte';
 
-  export let menu: NavLink[];
+  export let menu: NavItem[];
 
   $: activeUrl = $page.url.pathname;
 </script>
@@ -23,14 +23,10 @@
         target={link.target}
         itemprop="relatedLink"
         active={activeUrl === link.href || activeUrl.indexOf(`${link.href}/`) === 0}>
-        {#if /\w+:\w+/.test(link.label)}
-          <Icon
-            class="vector-non-scaling-stroke"
-            icon={link.label}
-            size="18" />
-        {:else}
-          {@html link.label}
-        {/if}
+        <IconTest
+          class="vector-non-scaling-stroke"
+          icon={link.label}
+          size="18" />
       </FooterLink>
     {/each}
   </FooterLinkGroup>

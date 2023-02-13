@@ -1,11 +1,11 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { Navbar, NavLi, NavUl, NavHamburger, Chevron, DarkMode } from 'flowbite-svelte';
-  import { Icon } from 'daks-svelte';
+  import { Icon, type NavItem } from 'daks-svelte';
   import NavBrand from './NavBrand.svelte';
   import Dropdown from './NavDropdown.svelte';
 
-  export let menu: NavLink[];
+  export let menu: NavItem[];
 
   /*const darkmodebtn = `p-2.5 rounded-lg text-lg text-gray-500 dark:text-gray-400
                        hover:bg-gray-100 dark:hover:bg-gray-700
@@ -59,7 +59,7 @@
         {@const home = link.href === '/'}
         <NavLi
           on:click={close}
-          class="cursor-pointer dark:!bg-gray-700{home ? ' hidden md:block' : ''}"
+          class="cursor-pointer select-none dark:!bg-gray-700{home ? ' hidden md:block' : ''}"
           href={link.href}
           target={link.target}
           {active}>

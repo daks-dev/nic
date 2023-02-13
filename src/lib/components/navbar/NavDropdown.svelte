@@ -3,6 +3,7 @@
   import { createEventDispatcher } from 'svelte';
   import { page } from '$app/stores';
   import { clickOutside } from 'flowbite-svelte/utils/clickOutside';
+  import  type { NavItem } from 'daks-svelte';
 
   export let liButtonClass = 'flex items-center justify-between w-full';
   //export let name;
@@ -24,7 +25,7 @@
 
   export let rel: undefined | string = undefined;
 
-  export let link!: NavLink;
+  export let link: NavItem;
 
   export let offset: undefined | number = undefined;
   export let active: boolean;
@@ -83,7 +84,7 @@
           class="py-1"
           aria-labelledby="dropdownLargeButton">
           {#each link.links as item}
-            {@const href = link.href + item.href}
+            {@const href = `${link.href}${item.href}`}
             {#if activeUrl === href}
               <li class={activeClass}>
                 <span

@@ -28,7 +28,7 @@
   <meta
     name="robots"
     content="noindex, follow" />
-  <title>DAKS PKG • Iconify</title>
+  <title>НИЦ СЭ • Iconify</title>
 </svelte:head>
 
 <main>
@@ -38,7 +38,7 @@
       rel="noreferrer nofollow"
       class="w-24 sm:w-32 hover:scale-110
              transition-all duration-300 ease-in-out"
-      href="https://github.com/daks-dev/nic.git"
+      href="https://github.com/daks-dev/daks-svelte"
       target="_blank">
       <img
         class="w-full h-auto"
@@ -54,7 +54,7 @@
         type="button"
         class="px-3 py-2 mx-2 border-2 rounded"
         disabled={waiting}>
-        ICONSET UPLOAD
+        ICONSET
       </button>
       {#if waiting}
         <Icon

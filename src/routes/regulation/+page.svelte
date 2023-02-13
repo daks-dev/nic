@@ -9,7 +9,7 @@
   let node: HTMLElement;
   const onload = () => node.classList.remove('opacity-0');
 
-  onMount(() => document?.lazyloadInstance?.update());
+  onMount(() => document?.lazyload.update());
 </script>
 
 <YandexMetrikaHit
