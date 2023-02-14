@@ -43,7 +43,7 @@
     class="ml-4" />
 
   <NavUl
-    class="dark:bg-gray-700"
+    class="!bg-transparent border-none"
     divClass="w-full md:block md:w-auto
               max-h-screen--navbar overflow-y-auto"
     {hidden}>

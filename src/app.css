@@ -41,7 +41,7 @@
 
 main,
 [role='main'] {
-  @apply flex flex-col;
+  @apply flex flex-col mb-8;
   padding-top: var(--navbar-height);
 }
 main > header,
@@ -51,12 +51,6 @@ main > header,
 }
 
 /* --- */
-.placeholders .bg-gray-200 {
-  @apply !bg-gray-400/50;
-}
-.placeholders .bg-gray-300 {
-  @apply !bg-gray-500/50;
-}
-.placeholders svg {
-  @apply fill-gray-400/50;
+.placeholders {
+  @apply text-slate-600 dark:text-slate-400;
 }

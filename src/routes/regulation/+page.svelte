@@ -16,7 +16,7 @@
   {title}
   {description} />
 
-<main itemprop="mainContentOfPage">
+<main class="min-h-screen mb-0" itemprop="mainContentOfPage">
   <header class="content sr-only">
     <h1 class="title">Регламент</h1>
   </header>

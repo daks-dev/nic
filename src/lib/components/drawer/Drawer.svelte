@@ -10,6 +10,9 @@
   export const open = () => (hidden = false);
   export const close = () => (hidden = true);
 
+  import microdata from '$lib/configs/microdata';
+  const { telephone } = microdata.organization;
+
   let transitionParams = {
     x: -384,
     duration: 300,
@@ -46,7 +49,7 @@
   {transitionParams}
   id="driver">
   <Sidebar asideClass="w-auto">
-    <SidebarWrapper>
+    <SidebarWrapper divClass ="overflow-y-auto py-4 px-3 rounded">
       <SidebarGroup
         class="flex flex-col items-center"
         on:click={close}>
@@ -57,11 +60,13 @@
         <a
           class="
             py-2 px-4
-            rounded-full hover:bg-gray-400/50
-            text-slate-300 hover:text-slate-800 tracking-wider text-xl
+            tracking-wider text-2xl
+            text-slate-600 dark:text-slate-400 hover:!text-white
+            rounded-full hover:bg-gray-500/50
+            ransition duration-200 ease-in-out
             select-none"
-          href="tel://+74953239923">
-          +7 (495) 323-99-23
+          href="tel://{telephone.replace(/[\s-()]/g, '')}">
+          {telephone}
         </a>
       </SidebarGroup>
       <SidebarGroup

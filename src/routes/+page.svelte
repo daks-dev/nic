@@ -1,13 +1,14 @@
 <script lang="ts">
+  import { Button } from 'flowbite-svelte';
   import {
-    Button,
+    YandexMetrikaHit,
     ImagePlaceholder,
     Skeleton,
     TestimonialPlaceholder,
     TextPlaceholder,
-    VideoPlaceholder
-  } from 'flowbite-svelte';
-  import { YandexMetrikaHit, Icon } from 'daks-svelte';
+    VideoPlaceholder,
+    Icon
+  } from 'daks-svelte';
 
   import microdata from '$lib/configs/microdata';
   const { email, telephone, address } = microdata.organization;
@@ -64,7 +65,7 @@
                     text-slate-600 dark:text-slate-400">
           <a
             class="font-semibold text-3xl xl:text-4xl hover:text-sky-500
-                   transition-all duration-200 ease-in-out"
+                   transition duration-200 ease-in-out"
             href="tel://{telephone.replace(/[\s-()]/g, '')}">
             {telephone}
           </a>
@@ -92,10 +93,10 @@
   <div class="placeholders content">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16 items-center">
       <ImagePlaceholder />
-      <TextPlaceholder class="" />
+      <TextPlaceholder />
       <Skeleton />
       <ImagePlaceholder class="-scale-x-100" />
-      <TextPlaceholder class="" />
+      <TextPlaceholder />
       <Skeleton />
       <TextPlaceholder class="lg:-scale-x-100 lg:order-last" />
       <Skeleton class="lg:-scale-x-100 lg:mr-auto" />

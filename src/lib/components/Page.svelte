@@ -1,6 +1,11 @@
 <script lang="ts">
-  import { ImagePlaceholder, Skeleton, TextPlaceholder, TestimonialPlaceholder } from 'flowbite-svelte';
-  import { YandexMetrikaHit } from 'daks-svelte';
+  import {
+    YandexMetrikaHit,
+    ImagePlaceholder,
+    Skeleton,
+    TextPlaceholder,
+    TestimonialPlaceholder
+  } from 'daks-svelte';
 
   export let title: string;
   export let description: string;
@@ -16,17 +21,17 @@
     <h1 class="title">{name}</h1>
   </header>
 
-  <div class="placeholders content">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+  <div class="content placeholders">
+    <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 mb-12">
       <ImagePlaceholder />
-      <TextPlaceholder class="" />
+      <TextPlaceholder />
       <Skeleton />
       <ImagePlaceholder class="-scale-x-100" />
-      <TextPlaceholder class="" />
+      <TextPlaceholder />
       <Skeleton />
       <TextPlaceholder class="lg:-scale-x-100 lg:order-last" />
       <Skeleton class="lg:-scale-x-100 lg:mr-auto" />
     </div>
-    <TestimonialPlaceholder />
+    <TestimonialPlaceholder class="max-w-xl mx-auto" />
   </div>
 </main>

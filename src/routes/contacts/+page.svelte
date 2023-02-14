@@ -36,7 +36,7 @@
   {description} />
 
 <main
-  class="justify-between min-h-screen"
+  class="justify-between min-h-screen mb-0"
   itemprop="mainContentOfPage">
   <header class="content mb-4">
     <h1 class="title">Контакты</h1>
