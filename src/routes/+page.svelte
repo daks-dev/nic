@@ -10,7 +10,7 @@
     Icon
   } from 'daks-svelte';
 
-  import microdata from '$lib/configs/microdata';
+  import microdata from '$configs/microdata';
   const { email, telephone, address } = microdata.organization;
 
   const title = 'НИЦ СЭ • Строительная экспертиза';
@@ -22,7 +22,7 @@
   {description} />
 
 <main itemprop="mainContentOfPage">
-  <header class="container">
+  <header class="wrapper">
     <div class="grid lg:grid-cols-12 gap-8 w-full pt-8">
       <div class="mr-auto place-self-center lg:col-span-7 2xl:col-span-8">
         <h1

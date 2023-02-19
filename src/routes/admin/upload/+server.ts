@@ -1,5 +1,5 @@
+import { iconset } from 'daks-svelte/dist/server';
 import { building } from '$app/environment';
-import { iconset } from 'daks-svelte/server';
 
 export const prerender = false;
 

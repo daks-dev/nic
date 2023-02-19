@@ -10,7 +10,7 @@
   export const open = () => (hidden = false);
   export const close = () => (hidden = true);
 
-  import microdata from '$lib/configs/microdata';
+  import microdata from '$configs/microdata';
   const { telephone } = microdata.organization;
 
   let transitionParams = {

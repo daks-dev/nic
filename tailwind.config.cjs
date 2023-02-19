@@ -9,17 +9,14 @@ module.exports = {
   ],
 
   presets: [
-    require('daks-svelte/assets/tailwindcss/presets/font-family.cjs'),
-    require('daks-svelte/assets/tailwindcss/presets/common.cjs')
+    require('daks-svelte/tailwindcss/presets/font-family.cjs'),
+    require('daks-svelte/tailwindcss/presets/common.cjs')
   ],
 
   theme: {
     extend: {
       colors: {
         primary: colors.slate
-      },
-      backgroundImage: {
-        'loading-data': 'url(daks-svelte/assets/icons/spinners/blocks-scale.svg)'
       }
     }
   },

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { BROWSER } from 'esm-env';
   import { lazyload, YandexMetrikaInit, RouteTransition, ScreenBlock } from 'daks-svelte';
   import { Drawer, Footer, Navbar } from '$lib/components';
 
@@ -8,10 +9,10 @@
   import type { PageData } from './$types';
   export let data: PageData;
 
-  import { app, navigation } from '$lib/configs';
+  import { app, nav } from '$configs';
 
   // window.matchMedia('(prefers-color-scheme: dark)').matches
-  if (!import.meta.env.SSR) {
+  if (BROWSER) {
     if (!('color-theme' in localStorage)) {
       localStorage.setItem('color-theme', 'dark');
       document.documentElement.classList.add('dark');
@@ -42,11 +43,11 @@
   <slot />
 </RouteTransition>
 
-<Footer menu={navigation.footer} />
+<Footer menu={nav.footer} />
 
-<Navbar menu={navigation.navbar} />
+<Navbar menu={nav.navbar} />
 
-<Drawer menu={navigation.draver} />
+<Drawer menu={nav.draver} />
 
 <ScreenBlock class="bg-neutral-100 dark:bg-gray-800" />
 

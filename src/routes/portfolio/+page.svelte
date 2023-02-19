@@ -20,12 +20,14 @@
   </header>
 
   <LightboxKit
-    class="container gap-8"
+    class="wrapper gap-8"
     classes={{ overlay: 'overflow-offset' }}
     options={{ behaviour: 'loop' }}
     {images}
     {thumbnails}
+    centered
     rounded
     shadow
+    scale
     grayscale />
 </main>

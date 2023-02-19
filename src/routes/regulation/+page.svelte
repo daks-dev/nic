@@ -22,7 +22,7 @@
   </header>
 
   <div
-    class="container
+    class="wrapper
            bg-center bg-no-repeat bg-waiting bg-1/4 sm:bg-1/5 lg:bg-1/10">
     <iframe
       bind:this={node}

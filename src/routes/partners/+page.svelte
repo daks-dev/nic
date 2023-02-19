@@ -27,6 +27,7 @@
     }}
     {images}
     {labels}
+    centered
     grid
     scale
     shadow />

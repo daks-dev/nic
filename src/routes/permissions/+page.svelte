@@ -20,10 +20,12 @@
   </header>
 
   <LightboxKit
-    class="container lg:content gap-8"
+    class="content gap-8"
     classes={{ overlay: 'overflow-offset' }}
     options={{ behaviour: 'loop' }}
     {images}
     {thumbnails}
-    shadow />
+    centered
+    shadow
+    scale />
 </main>
