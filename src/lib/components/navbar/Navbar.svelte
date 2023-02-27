@@ -2,12 +2,14 @@
   import classNames from 'classnames';
   import { page } from '$app/stores';
   import { Navbar, NavLi, NavUl, NavHamburger, Chevron, DarkMode } from 'flowbite-svelte';
-  import { Icon } from 'daks-svelte';
+  import { Nav, Swiping, Icon } from 'daks-svelte';
   import NavBrand from './NavBrand.svelte';
   import Dropdown from './NavDropdown.svelte';
   import type { NavItem } from 'daks-svelte/types';
 
   export let links: NavItem[];
+  export let scope = Nav.map(links, true);
+  export let paging = false;
 
   /*
   const darkmodebtn = `
@@ -20,6 +22,12 @@
 
   $: activeUrl = $page.url.pathname;
 </script>
+
+{#if scope.length}
+  <Swiping
+    {scope}
+    {paging} />
+{/if}
 
 <Navbar
   let:hidden
