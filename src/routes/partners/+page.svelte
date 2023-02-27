@@ -4,7 +4,7 @@
   import type { PageData } from './$types';
   export let data: PageData;
 
-  const { images, labels } = data;
+  const { dataset } = data;
 
   const title = 'НИЦ СЭ • Партнёры';
   const description = 'Партнёры АО НИЦ «Строительная экспертиза»';
@@ -21,12 +21,10 @@
 
   <GalleryKit
     class="content lg:grid-cols-2 gap-x-8 gap-y-12"
-    classes={{
-      figure: 'items-center',
-      caption: 'mt-3 text-center text-lg text-slate-700 dark:text-slate-400'
+    custom={{
+      caption: 'text-lg text-slate-700 dark:text-slate-400'
     }}
-    {images}
-    {labels}
+    {dataset}
     centered
     grid
     scale

@@ -1,11 +1,12 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { Footer, FooterLinkGroup, Label } from 'flowbite-svelte';
-  import { IconTest, type NavItem } from 'daks-svelte';
+  import { IconTest } from 'daks-svelte';
   import FooterCopyright from './FooterCopyright.svelte';
   import FooterLink from './FooterLink.svelte';
+  import type { NavItem } from 'daks-svelte/types';
 
-  export let menu: NavItem[];
+  export let links: undefined | NavItem[] = undefined;
 
   $: activeUrl = $page.url.pathname;
 </script>
@@ -15,21 +16,23 @@
     href="/"
     by="НИЦ «Строительная экспертиза»&trade;"
     year={2022} />
-  <FooterLinkGroup
-    ulClass="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
-    {#each menu as link}
-      <FooterLink
-        href={link.href}
-        target={link.target}
-        itemprop="relatedLink"
-        active={activeUrl === link.href || activeUrl.indexOf(`${link.href}/`) === 0}>
-        <IconTest
-          class="vector-non-scaling-stroke"
-          icon={link.label}
-          size="18" />
-      </FooterLink>
-    {/each}
-  </FooterLinkGroup>
+  {#if links}
+    <FooterLinkGroup
+      ulClass="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+      {#each links as link}
+        <FooterLink
+          href={link.href}
+          target={link.target}
+          itemprop="relatedLink"
+          active={activeUrl === link.href || activeUrl.indexOf(`${link.href}/`) === 0}>
+          <IconTest
+            class="vector-non-scaling-stroke"
+            icon={link.label}
+            size="18" />
+        </FooterLink>
+      {/each}
+    </FooterLinkGroup>
+  {/if}
 </Footer>
 
 <!--Footer footerType="logo">

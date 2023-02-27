@@ -1,5 +1,5 @@
-import getter from '$lib/assets/images/content/partners';
+import getter, { sources } from '$lib/assets/images/content/partners';
 
 export const load = async () => ({
-  ...await getter()
+  dataset: await getter(sources)
 });

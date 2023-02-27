@@ -29,10 +29,10 @@ const config = {
     adapter: adapter(options),
 
     files: {
-      serviceWorker: 'node_modules/daks-svelte/app/service-worker'
+      serviceWorker: 'node_modules/daks-svelte/dist/app/service-worker'
     }
 
-    //inlineStyleThreshold: 8192
+    // inlineStyleThreshold: Infinity
   }
 };
 

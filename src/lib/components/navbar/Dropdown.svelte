@@ -1,7 +1,7 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { Dropdown, DropdownItem, Chevron } from 'flowbite-svelte';
-  import  type { NavItem } from 'daks-svelte';
+  import  type { NavItem } from 'daks-svelte/types';
 
   export let link: NavItem;
 

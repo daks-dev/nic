@@ -2,16 +2,19 @@
   import classNames from 'classnames';
   import { page } from '$app/stores';
   import { Navbar, NavLi, NavUl, NavHamburger, Chevron, DarkMode } from 'flowbite-svelte';
-  import { Icon, type NavItem } from 'daks-svelte';
+  import { Icon } from 'daks-svelte';
   import NavBrand from './NavBrand.svelte';
   import Dropdown from './NavDropdown.svelte';
+  import type { NavItem } from 'daks-svelte/types';
 
-  export let menu: NavItem[];
+  export let links: NavItem[];
 
-  /*const darkmodebtn = `
+  /*
+  const darkmodebtn = `
     p-2.5 rounded-lg text-lg text-gray-500 dark:text-gray-400
     hover:bg-gray-100 dark:hover:bg-gray-700
-    focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700`;*/
+    focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700`;
+  */
 
   //const color: any = 'primary';
 
@@ -24,7 +27,7 @@
   class="
     fixed z-40 top-0 left-0 shadow-md dark:bg-primary-700
     overflow-offset"
-  color="form">
+  color="navbar">
   {@const close = () => hidden || toggle()}
 
   <NavBrand
@@ -51,7 +54,7 @@
       w-full md:block md:w-auto
       max-h-screen--navbar overflow-y-auto"
     {hidden}>
-    {#each menu as link}
+    {#each links as link}
       {@const active = activeUrl === link.href}
       {#if link.links}
         {@const step = activeUrl.indexOf(`${link.href}/`) === 0}

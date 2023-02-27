@@ -1,6 +1,6 @@
-// $lib/assets/images/content/partners
+import type { ImageMeta, Caption, DataImage } from 'daks-svelte/types'
 
-export const sources = async () => [
+export const sources = async (): Promise<ImageMeta[]> => [
   (await import(`./00.png?w=480&h=250&webp`)).default,
   (await import(`./01.png?w=480&h=250&webp`)).default,
   (await import(`./02.png?w=480&h=250&webp`)).default,
@@ -8,7 +8,7 @@ export const sources = async () => [
   (await import(`./04.png?w=480&h=250&webp`)).default
 ];
 
-export const labels = [
+export const captions: Caption[] = [
   { subtitle: 'Строительное Управление № 363' },
   { subtitle: 'Научно-Исследовательский Центр «Строительная экспертиза»' },
   { subtitle: 'Группа Компаний «ССК»' },
@@ -16,7 +16,9 @@ export const labels = [
   { subtitle: '«ST»' }
 ];
 
-export default async () => ({
-  images: await sources(),
-  labels
-});
+export default async (fn: () => Promise<ImageMeta[]>): Promise<DataImage[]> =>
+  (await fn()).reduce(
+    (res, val, key) => ((res[key] = Object.assign(val, captions[key])), res),
+    Array(0)
+  );
+  

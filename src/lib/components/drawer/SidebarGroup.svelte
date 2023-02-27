@@ -8,7 +8,7 @@
     SidebarItem
   } from 'flowbite-svelte';
   import SidebarDropdownWrapper from './SidebarDropdownWrapper.svelte'
-  import  type { NavItem } from 'daks-svelte';
+  import  type { NavItem } from 'daks-svelte/types';
 
   export let links: undefined | NavItem[] = undefined;
   export let root = '';

@@ -9,7 +9,7 @@
   import type { PageData } from './$types';
   export let data: PageData;
 
-  import { app, nav } from '$configs';
+  import { app, nav, draver, map } from '$configs';
 
   // window.matchMedia('(prefers-color-scheme: dark)').matches
   if (BROWSER) {
@@ -43,11 +43,11 @@
   <slot />
 </RouteTransition>
 
-<Footer menu={nav.footer} />
+<Footer {...nav.footer} />
 
-<Navbar menu={nav.navbar} />
+<Navbar {...nav.navbar} />
 
-<Drawer menu={nav.draver} />
+<Drawer {...draver} />
 
 <ScreenBlock class="bg-neutral-100 dark:bg-gray-800" />
 

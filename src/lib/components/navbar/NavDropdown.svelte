@@ -1,10 +1,11 @@
 <script lang="ts">
   import classNames from 'classnames';
   import { createEventDispatcher } from 'svelte';
+  import { outside } from 'daks-svelte';
   import { goto } from '$app/navigation';
   import { page } from '$app/stores';
-  import { clickOutside } from 'flowbite-svelte/utils/clickOutside';
-  import type { NavItem } from 'daks-svelte';
+  // import { clickOutside } from 'flowbite-svelte/dist/utils/clickOutside';
+  import type { NavItem } from 'daks-svelte/types';
 
   export let liButtonClass = 'flex items-center justify-between w-full';
   //export let name;
@@ -69,7 +70,7 @@
 </script>
 
 <li
-  use:clickOutside={() => !hidden && toggle()}
+  use:outside={() => !hidden && toggle()}
   class={liClass}>
   <button
     on:click|preventDefault={toggle}
@@ -99,7 +100,7 @@
       <slot>
         <ul
           class="
-            -md:ml-1 md:py-1
+            -md:ml-1 md:pt-1 md:pb-2
             -md:border-l-2 border-dotted border-gray-700 dark:border-gray-500"
           aria-labelledby="dropdownLargeButton">
           {#each link.links as item}

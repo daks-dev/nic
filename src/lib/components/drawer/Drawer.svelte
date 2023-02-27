@@ -4,7 +4,11 @@
   import { Drawer, Sidebar, SidebarBrand, SidebarWrapper } from 'flowbite-svelte';
   import { Icon } from 'daks-svelte';
   import SidebarGroup from './SidebarGroup.svelte';
-  export let menu: any;
+  import type { NavItem } from 'daks-svelte/types';
+
+  export let header: undefined | NavItem[] = undefined;
+  export let activity: undefined | NavItem[] = undefined;
+  export let footer: undefined | NavItem[] = undefined;
 
   let hidden = true;
   export const open = () => (hidden = false);
@@ -49,7 +53,7 @@
   {transitionParams}
   id="driver">
   <Sidebar asideClass="w-auto">
-    <SidebarWrapper divClass ="overflow-y-auto py-4 px-3 rounded">
+    <SidebarWrapper divClass="overflow-y-auto py-4 px-3 rounded">
       <SidebarGroup
         class="flex flex-col items-center"
         on:click={close}>
@@ -69,16 +73,22 @@
           {telephone}
         </a>
       </SidebarGroup>
-      <SidebarGroup
-        links={menu.header}
-        border />
-      <SidebarGroup
-        links={menu.activity}
-        root="/activity"
-        border />
-      <SidebarGroup
-        links={menu.footer}
-        border />
+      {#if header}
+        <SidebarGroup
+          links={header}
+          border />
+      {/if}
+      {#if activity}
+        <SidebarGroup
+          links={activity}
+          root="/activity"
+          border />
+      {/if}
+      {#if footer}
+        <SidebarGroup
+          links={footer}
+          border />
+      {/if}
     </SidebarWrapper>
   </Sidebar>
   <button
