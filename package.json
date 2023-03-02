@@ -8,7 +8,7 @@
   },
   "author": "DVA",
   "homepage": "https://dev.stroyexp.info/",
-  "private": true,
+  "private": false,
   "scripts": {
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
